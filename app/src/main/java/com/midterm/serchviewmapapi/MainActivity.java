@@ -45,10 +45,13 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
                     } catch (Exception e) {
                         System.out.print("LOI NE HIEU OI"+e.getMessage());
                     }
-                    Address address = addressList.get(0);
-                    LatLng latLng = new LatLng(address.getLatitude(),address.getLongitude());
-                    map.addMarker(new MarkerOptions().position(latLng).title(location));
-                    map.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng,10));
+                    if(addressList.size()>0){
+                        Address address = addressList.get(0);
+                        LatLng latLng = new LatLng(address.getLatitude(),address.getLongitude());
+                        map.addMarker(new MarkerOptions().position(latLng).title(location));
+                        map.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng,10));
+                    }
+
                 }
                 return false;
             }
