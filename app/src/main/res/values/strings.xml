@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">serchviewMAPAPI</string>
+    <string name="map_key" translatable="false">AIzaSyBPVOiiXB5UEd2gGfcPykdD9dWnbTpKOGM</string>
+</resources>
